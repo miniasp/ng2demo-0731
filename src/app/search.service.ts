@@ -5,14 +5,13 @@ export class SearchService {
 
   data: any;
 
-  ngOnInit() {
-    this.data = this.doSearch('');
+  constructor() {
+    this.data = this.default_data;
   }
-
-  constructor() { }
 
   doSearch(keyword) {
     this.data = this.default_data.filter( (value) => {
+      if(!keyword) return true;
       return value.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1;
     });
   }

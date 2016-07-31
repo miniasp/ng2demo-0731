@@ -7,15 +7,13 @@ import { SearchService } from '../search.service';
   templateUrl: 'search.component.html',
   styleUrls: ['search.component.css']
 })
-export class SearchComponent implements OnInit, OnChanges {
+export class SearchComponent implements OnInit {
 
   keyword: string;
 
   constructor(private searchsvc: SearchService) { }
 
   ngOnInit() {
-  }
-  ngOnChanges() {
   }
 
   doSearch() {
