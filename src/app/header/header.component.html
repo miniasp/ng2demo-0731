@@ -29,9 +29,11 @@
       <hgroup class="pull-left">
         <h1><a [href]="titlelink" [title]="title" [innerHTML]="title"></a></h1>
         <h3 class="subtitle">
-          記載著 Will 在網路世界的學習心得與技術分享
 
-          <a href="#" (click)="PlusOne()">+{{num}}</a>
+          <input type="text" [(ngModel)]="title">
+
+          <!--記載著 Will 在網路世界的學習心得與技術分享
+          <a href="#" (click)="PlusOne()">+{{num}}</a>-->
 
         </h3>
       </hgroup>
