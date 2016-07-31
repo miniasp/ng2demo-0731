@@ -8,7 +8,10 @@
     <section class="col-md-8 content-wrapper">
       <div id="ctl00_cphBody_divError"></div>
       <div id="ctl00_cphBody_PostList1_posts" class="posts">
-        <app-article></app-article>
+
+        <app-article *ngFor="let item of data" [item]="item"></app-article>
+
+
       </div>
     </section>
 
