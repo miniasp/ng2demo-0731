@@ -27,13 +27,15 @@
     <div class="container">
       <img src="/assets/images/logo.png" class="pull-left logo" alt="The Will Will Web">
       <hgroup class="pull-left">
-        <h1><a [href]="titlelink" [title]="title" [innerHTML]="title"></a></h1>
+        <h1>
+          <a [href]="titlelink" [title]="title" [innerHTML]="title"></a>
+          <br>
+          <input type="text" [(ngModel)]="editTitleText" (keyup)="editTitle($event)">
+        </h1>
         <h3 class="subtitle">
 
-          <input type="text" [(ngModel)]="title">
-
-          <!--記載著 Will 在網路世界的學習心得與技術分享
-          <a href="#" (click)="PlusOne()">+{{num}}</a>-->
+          記載著 Will 在網路世界的學習心得與技術分享
+          <a href="#" (click)="PlusOne()">+{{num}}</a>
 
         </h3>
       </hgroup>

@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit {
   title = '<i>The Will Will Web</i>';
   titlelink = 'http://blog.miniasp.com/';
 
+  editTitleText = this.title;
+
   num = 1;
 
   constructor() { }
@@ -20,6 +22,13 @@ export class HeaderComponent implements OnInit {
 
   PlusOne() {
     this.num = this.num + 1;
+  }
+
+  editTitle($event: KeyboardEvent) {
+    //console.log($event);
+    if($event.keyCode == 13) {
+      this.title = this.editTitleText;
+    }
   }
 
 }
