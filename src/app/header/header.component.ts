@@ -9,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   title = 'The Will Will Web';
+  
+  num = 1;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  PlusOne() {
+    this.num = this.num + 1;
   }
 
 }
