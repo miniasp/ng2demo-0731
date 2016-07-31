@@ -13,9 +13,9 @@ export class SearchService {
 
     // /api/articles.json
     this.http.get('/api/articles.json')
-      .map( (res) => res.json() )
+      //.map( (res) => res.json() )
       .subscribe( (value) => {
-        this.data = this.default_data = value;
+        this.data = this.default_data = value.json();
       });
   }
 
