@@ -28,8 +28,12 @@
       <img src="/assets/images/logo.png" class="pull-left logo" alt="The Will Will Web">
       <hgroup class="pull-left">
         <h1>
-          <a *ngIf="!IsEdit" (dblclick)="EnterEdit($event)" [title]="title" [innerHTML]="title"></a>
-          <input *ngIf="IsEdit" type="text" #editInput [value]="editTitleText" (keyup)="editTitle($event, editInput)">
+          <a *ngIf="!IsEdit" (dblclick)="EnterEdit($event)"
+             [title]="title" [innerHTML]="title"></a>
+          <input *ngIf="IsEdit" type="text" 
+                #editInput 
+                [value]="title" 
+                (keyup)="editTitle($event, editInput)">
         </h1>
         <h3 [ngClass]="{subtitle: (num % 2 == 0)}"
             [ngStyle]="{color: 'red'}">

@@ -10,10 +10,9 @@ export class HeaderComponent implements OnInit {
 
   @Input()
   title: string;
+  // editTitleText: string;
 
   titlelink = 'http://blog.miniasp.com/';
-
-  editTitleText = this.title;
 
   num = 1;
 
@@ -22,6 +21,9 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    // this.editTitleText = this.title;
+
   }
 
   PlusOne() {
