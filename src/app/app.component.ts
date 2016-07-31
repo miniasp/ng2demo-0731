@@ -14,8 +14,19 @@ export class AppComponent {
 
   title = '<i>The Will Will Web</i>';
 
+  data: any;
 
-  data = [
+  ngOnInit() {
+    this.data = this.default_data;
+  }
+
+  doSearch(keyword) {
+    this.data = this.default_data.filter( (value) => {
+      return value.title.toLowerCase().indexOf(keyword.toLowerCase()) > -1;
+    });
+  }
+
+  default_data = [
     {
       "href": "http://blog.miniasp.com/post/2016/04/30/Visual-Studio-Code-from-Command-Prompt-notes.aspx",
       "title": "從命令提示字元中開啟 Visual Studio Code 如何避免顯示惱人的偵錯訊息",

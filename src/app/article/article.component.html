@@ -2,7 +2,7 @@
 <article class="post">
   <header class="post-header">
     <h2 class="post-title">
-        <a [href]="item.href">{{item.title}}</a>
+        <a [href]="item.href">{{item.title|uppercase}}</a>
     </h2>
     <div class="post-info clearfix">
       <span class="post-date"><i class="glyphicon glyphicon-calendar"></i>{{item.date}}</span>

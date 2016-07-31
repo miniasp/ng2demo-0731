@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, Output, EventEmitter } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: 'search.component.html',
   styleUrls: ['search.component.css']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent implements OnInit, OnChanges {
 
   keyword: string;
 
@@ -17,7 +17,9 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
   }
+  ngOnChanges() {
 
+  }
   doSearch() {
     this.search.emit(this.keyword);
   }
