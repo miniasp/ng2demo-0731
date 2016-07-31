@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  title = '<i>The Will Will Web</i>';
+  @Input()
+  title: string;
+
   titlelink = 'http://blog.miniasp.com/';
 
   editTitleText = this.title;
