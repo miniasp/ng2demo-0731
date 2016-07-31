@@ -31,7 +31,8 @@
           <a *ngIf="!IsEdit" (dblclick)="EnterEdit($event)" [title]="title" [innerHTML]="title"></a>
           <input *ngIf="IsEdit" type="text" #editInput [value]="editTitleText" (keyup)="editTitle($event, editInput)">
         </h1>
-        <h3 class="subtitle">
+        <h3 [ngClass]="{subtitle: (num % 2 == 0)}"
+            [ngStyle]="{color: 'red'}">
 
           記載著 Will 在網路世界的學習心得與技術分享
           <a href="#" (click)="PlusOne()">+{{num}}</a>
